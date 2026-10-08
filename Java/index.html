@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nova Shop - gündəlik ehtiyaclarınız üçün seçilmiş məhsullar">
+    <title>Nova Shop | Onlayn mağaza</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container navbar">
+            <a class="brand" href="#" aria-label="Nova Shop ana səhifə">
+                <span class="brand-mark">N</span>
+                <span>nur<span class="brand-accent">shop</span></span>
+            </a>
+            <nav class="main-nav" aria-label="Əsas menyu">
+                <a class="active" href="#products">Mağaza</a>
+                <a href="#categories">Kateqoriyalar</a>
+                <a href="#about">Haqqımızda</a>
+            </nav>
+            <div class="nav-actions">
+                <label class="search-box" aria-label="Məhsul axtar">
+                    <span aria-hidden="true">⌕</span>
+                    <input id="searchInput" type="search" placeholder="Məhsul axtar..." autocomplete="off">
+                </label>
+                <button class="cart-button" id="cartButton" type="button" aria-label="Səbəti aç">
+                    <span class="cart-icon" aria-hidden="true">🛒</span>
+                    <span class="cart-label">Səbət</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="menu-button" id="menuButton" type="button" aria-label="Menyunu aç">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-copy">
+                    <p class="eyebrow">YENİ MÖVSÜM • YENİ SEÇİMLƏR</p>
+                    <h1>Gündəlik həyatına<br><em>rəng qat.</em></h1>
+                    <p class="hero-text">Sənin üçün seçilmiş keyfiyyətli məhsulları kəşf et. Sadə, rahat və zövqlü
+                        alış-veriş.</p>
+                    <a class="primary-button" href="#products">Məhsullara bax <span>→</span></a>
+                </div>
+                <div class="hero-art" aria-hidden="true">
+                    <div class="sun"></div>
+                    <div class="art-card art-card-back"></div>
+                    <div class="art-card art-card-front"><span>NEW<br>ARRIVALS</span></div>
+                    <div class="sparkle sparkle-one">✦</div>
+                    <div class="sparkle sparkle-two">✦</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="shop-section container" id="products">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">SEÇİLMİŞ MƏHSULLAR</p>
+                    <h2>Bu həftənin favoritləri</h2>
+                </div>
+                <span class="product-total" id="productTotal">8 məhsul</span>
+            </div>
+            <div class="category-list" id="categories" role="group" aria-label="Məhsul kateqoriyaları">
+                <button class="category active" data-category="all">Hamısı</button>
+                <button class="category" data-category="home">Ev üçün</button>
+                <button class="category" data-category="style">Stil</button>
+                <button class="category" data-category="tech">Texnologiya</button>
+            </div>
+            <div class="product-grid" id="productGrid"></div>
+            <p class="empty-state" id="emptyState" hidden>Axtarışınıza uyğun məhsul tapılmadı.</p>
+        </section>
+
+        <section class="about-strip" id="about">
+            <div class="container benefits">
+                <div><strong>🚚</strong><span><b>Pulsuz çatdırılma</b><small>100 AZN-dən yuxarı
+                            sifarişlərə</small></span></div>
+                <div><strong>↺</strong><span><b>Asan qaytarma</b><small>14 gün ərzində rahatlıqla</small></span></div>
+                <div><strong>♡</strong><span><b>Seçilmiş keyfiyyət</b><small>Hər məhsulu sənin üçün
+                            seçirik</small></span></div>
+            </div>
+        </section>
+    </main>
+
+    <div class="overlay" id="overlay" hidden></div>
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Səbət" aria-hidden="true">
+        <div class="drawer-header">
+            <div>
+                <p class="eyebrow">SİFARİŞİN</p>
+                <h2>Səbətim <span id="drawerCount">(0)</span></h2>
+            </div>
+            <button class="close-button" id="closeCart" type="button" aria-label="Səbəti bağla">×</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-empty" id="cartEmpty"><span>🛍</span>
+            <p>Səbətiniz hələ boşdur</p><small>Bəyəndiyiniz məhsulları səbətə əlavə edin.</small>
+        </div>
+        <div class="cart-footer">
+            <div class="subtotal"><span>Cəmi</span><strong id="cartTotal">0.00 AZN</strong></div>
+            <button class="checkout-button" type="button" id="checkoutButton">Sifarişi rəsmiləşdir
+                <span>→</span></button>
+        </div>
+    </aside>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
